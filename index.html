@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head>    
   <title>Настроение</title>
+  <meta charset="utf-8">
+  <link href="styles.css" rel="stylesheet">
   <script id="quotes_json" type="application/json">
     [
       {
@@ -12,14 +14,31 @@
         "phrase": "Собираюсь жить вечно, пока всё идёт нормально"
       },
       {
-        "phrase": "Вывеска над кафе — '\u003cМы открылись\u003e'. Что-то не так. Где же '\u003c/Мы открылись\u003e'?"
+        "phrase": "Вывеска над кафе — '<Мы открылись>'. Что-то не так. Где же '< / Мы открылись>'?"
       },
       {
         "phrase": "Если ты будешь усердно работать по 8 часов в день, то обязательно станешь боссом и начнешь работать по 12"
       }
     ]
-  </script>
+  </script>     
 </head>
 <body>
+        <h1 style="font-size: 100px; text-align: center">Несмешные цитаты на белом фоне</h1>
+        <h1 id="phrase" style="font-size: 100px; text-align: center"></h1>
+        <h1 id="signature" style="font-size: 100px"></h1>  
+        <script type="text/javascript">
+            function getRandomInt(min, max){
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+            }    
+            function printRandomQuote(){
+                quoteId = getRandomInt(0, 3)
+                manifest = document.getElementById("quotes_json").innerHTML
+                manifest = JSON.parse(manifest)
+                document.getElementById("phrase").innerHTML = manifest[quoteId]["phrase"]
+                if(typeof manifest[quoteId]["signature"] != "undefined")
+                    document.getElementById("signature").innerHTML = manifest[quoteId]["signature"]
+            }
+            windowsOnload = printRandomQuote()
+        </script>     
 </body>
 </html>
