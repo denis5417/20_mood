@@ -1,7 +1,7 @@
-# Site for the Mood
+# Несмешные цитаты на белом фоне
 
-[TODO. There will be project description]
+Сайт для поддержания настроения несмешными цитатами на белом фоне. Каждый раз при загрузке он выдает 1 несмешную цитату на белом фоне. Доступен [тут](https://denis5417.github.io/20_mood/)
 
-# Project Goals
+# Цели проекта
 
-The code is written for educational purposes. Training course for web-developers - [DEVMAN.org](https://devman.org)
+Этот код написан в образовательных целях. Тренировачный курс для веб-девелоперов - [DEVMAN.org](https://devman.org)
